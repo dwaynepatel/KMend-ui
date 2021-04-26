@@ -537,3 +537,19 @@
       [plugins]="lineChartPlugins">
   </canvas>
 </div>
+
+<button mat-button (click)="updateChart()">update chart</button>
+
+<mat-slider min="1" max="100" step="1" value="1" (input)="onInputChange($event)"></mat-slider>
+
+<h4>Basic mat-select</h4>
+<mat-form-field appearance="fill">
+  <mat-label>Favorite food</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let region of regionList" [value]="region">
+      {{region}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<!-- <div *ngFor="let obj of spend">{{obj | json}}</div> -->
